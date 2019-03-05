@@ -1,5 +1,7 @@
-const { app, BrowserWindow} = require('electron');
+const { app, BrowserWindow, Menu} = require('electron');
 const env = process.argv[3];
+const template = require('./electron-react/menu-config.json')
+const menuTemplate = template.menu;
 
 // 浏览器引用
 let mainWindow;
@@ -25,6 +27,10 @@ let createWindow = () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  //菜单创建
+  const menu = Menu.buildFromTemplate(menuTemplate);
+  Menu.setApplicationMenu(menu);
 };
 
 // 当app准备就绪时候开启窗口
