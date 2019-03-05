@@ -1,0 +1,19 @@
+.topMenuDiv {
+  opacity: 0.4;
+  position: fixed;
+  top: -17px;
+  right: 24px;
+}
+
+.topMenuDiv p {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.topMenuDiv p:hover {
+  background-color: #eee;
+}

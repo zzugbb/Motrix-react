@@ -1,0 +1,53 @@
+.leftMenu {
+  width: 78px;
+  color: #fff;
+  height: 100vh;
+  float: left;
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+}
+
+.topIcon {
+  flex: 1;
+}
+
+.taskListIcon {
+  margin: 50px auto 0 auto;
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
+
+.addIcon {
+  margin: 20px auto 0 auto;
+  font-size: 22px;
+  width: 32px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
+
+.bottomIcon {
+  margin-bottom: 24px;
+}
+
+.settingIcon {
+  font-size: 22px;
+  margin: 0 auto;
+  width: 32px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
+
+.aboutIcon {
+  font-size: 22px;
+  margin: 20px auto 0 auto;
+  width: 32px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+}
