@@ -106,10 +106,6 @@
       "web.jsx",
       "jsx",
       "node"
-    ],
-    "watchPlugins": [
-      "E:\\gitHub-space\\Motrix-react\\node_modules\\jest-watch-typeahead\\filename.js",
-      "E:\\gitHub-space\\Motrix-react\\node_modules\\jest-watch-typeahead\\testname.js"
     ]
   },
   "babel": {
