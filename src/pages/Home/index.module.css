@@ -1,4 +1,37 @@
 .subnav {
-  margin-left: 78px;
   width: 200px;
+  height: 100vh;
+  background-color: #f4f5f7;
+  color: #4d515a;
+}
+
+.subnav p {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.taskUl {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.taskUl li {
+  padding-left: 20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.taskUl li i {
+  vertical-align: middle;
+}
+
+.taskUl li span {
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.taskActiveLi {
+  color: #5b5bea;
+  background-color: #eaecf0;
 }
