@@ -15,7 +15,7 @@ let createWindow = () => {
 
   if(env === "dev") { 
     mainWindow.loadURL("http://localhost:3000/")
-  } else if (env === "bvuild") { 
+  } else if (env === "build") { 
     mainWindow.loadFile('./build/index.html/');
   }
 
