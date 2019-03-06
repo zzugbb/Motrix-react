@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Icon } from 'antd';
 import LeftMenu from '../../components/LeftMenu'
 import styles from './index.module.css';
+import TopMenu from '../../components/TopMenu'
 
 class Setting extends Component {
   render() {
@@ -27,6 +28,7 @@ class Setting extends Component {
         </div>
         <div style={{flex: 1}}>
           <div className={styles.mainDiv}>
+            <TopMenu/>
             我还没写那！！！！意外不！！！
             <Icon type="smile" />
             <Icon type="frown" />
