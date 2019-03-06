@@ -1,7 +1,6 @@
 const { app, BrowserWindow, Menu} = require('electron');
 const env = process.argv[3];
-const template = require('./electron-react/menu-config.json')
-const menuTemplate = template.menu;
+const menuTemplate = require('./electron-react/menu-config.js')
 
 // 浏览器引用
 let mainWindow;
@@ -21,7 +20,7 @@ let createWindow = () => {
   }
 
   //打开开发者工具
-  mainWindow.webContents.openDevTools({mode:'bottom'});
+  //mainWindow.webContents.openDevTools({mode:'bottom'});
 
   // 当window被关闭时，除掉window的引用
   mainWindow.on('closed', () => {
@@ -29,7 +28,7 @@ let createWindow = () => {
   });
 
   //菜单创建
-  const menu = Menu.buildFromTemplate(menuTemplate);
+  const menu = Menu.buildFromTemplate(menuTemplate.menuTemplate);
   Menu.setApplicationMenu(menu);
 };
 

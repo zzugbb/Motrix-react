@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Modal } from 'antd';
+import { Modal, Input, Icon } from 'antd';
+import styles from './index.module.css';
+
+const { TextArea } = Input;
 
 class AddTask extends Component {
   
@@ -34,14 +37,24 @@ class AddTask extends Component {
     return (
       <div>
         <Modal
-          title="Basic Modal"
+          title="链接任务"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          okText="提交"
+          cancelText="取消"
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <TextArea placeholder="请输入链接" autosize={{minRows: 2}} />
+          <div className={styles.taskName}>
+            <span>重命名</span>
+            <Input placeholder="选填" />
+          </div>
+          <div className={styles.taskPath}>
+            <span>存储路径</span>
+            <Input placeholder="Downloads" 
+              suffix={<Icon type="folder-open" />}
+            />
+          </div>
         </Modal>
       </div>
     );

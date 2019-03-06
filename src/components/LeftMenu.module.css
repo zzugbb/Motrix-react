@@ -12,6 +12,10 @@
   flex: 1;
 }
 
+.topIcon a {
+  color: #fff;
+}
+
 .taskListIcon {
   margin: 50px auto 0 auto;
   font-size: 22px;
@@ -34,6 +38,10 @@
 
 .bottomIcon {
   margin-bottom: 24px;
+}
+
+.bottomIcon a {
+  color: #fff;
 }
 
 .settingIcon {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom';
 import { Icon} from 'antd';
 import styles from './LeftMenu.module.css';
 import AddTask from '../pages/AddTask'
@@ -24,11 +25,15 @@ class LeftMenu extends Component {
     return (
       <div className={styles.leftMenu}>
         <div className={styles.topIcon}>
-          <p className={styles.taskListIcon}><Icon type="ordered-list"/></p>
+          <Link to={"/"} replace>
+            <p className={styles.taskListIcon}><Icon type="ordered-list"/></p>
+          </Link>
           <p className={styles.addIcon} onClick={this.handleClickPlus.bind(this)}><Icon type="plus" /></p>  
         </div>
         <div className={styles.bottomIcon}>
-          <p className={styles.settingIcon}><Icon type="setting" /></p>
+          <Link to={"/setting"} replace>
+            <p className={styles.settingIcon}><Icon type="setting" /></p>
+          </Link>
           <p className={styles.aboutIcon}><Icon type="question-circle" /></p>
         </div>
         {this.state.addTaskVisible ? <AddTask addTaskVisible={this.state.addTaskVisible} showAddTaskModel={this.handleClickPlus.bind(this)}/> : null}
