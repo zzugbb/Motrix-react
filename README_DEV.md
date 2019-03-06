@@ -35,6 +35,13 @@ npx create-react-app my-app
 
 ```sh
 npm install antd --save
+npm install babel-plugin-import --save-dev
+```
+
+```js
+//webpack.config.js---349行
+//增加此配置，注意style:true 动态加载；style:css加载生成后的css文件
+['import', { libraryName: 'antd', style: 'css' }],
 ```
 
 ## electron 在 react 中使用

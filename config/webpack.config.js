@@ -346,6 +346,8 @@ module.exports = function(webpackEnv) {
                       },
                     },
                   ],
+                  //增加此配置，注意style:true 动态加载；style:css加载生成后的css文件
+                  ['import', { libraryName: 'antd', style: 'css' }],
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/

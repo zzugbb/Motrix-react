@@ -19,6 +19,7 @@
   text-align: center;
   height: 32px;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .addIcon {
@@ -28,6 +29,7 @@
   text-align: center;
   height: 32px;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .bottomIcon {
@@ -41,6 +43,7 @@
   text-align: center;
   height: 32px;
   line-height: 32px;
+  cursor: pointer;
 }
 
 .aboutIcon {
@@ -50,4 +53,5 @@
   text-align: center;
   height: 32px;
   line-height: 32px;
+  cursor: pointer;
 }

@@ -28,7 +28,7 @@ class Home extends Component {
         </div>
         <div style={{flex: 1}}>
           <TopMenu/>
-          <div>
+          <div className={styles.mainDiv}>
             222
           </div>
         </div>
