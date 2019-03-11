@@ -39,3 +39,46 @@
 .mainDiv {
   margin-top: 50px;
 }
+
+.divHide {
+  display: none;
+}
+
+.divShow {
+  display: show;
+  margin-left: 30px;
+}
+
+.line {
+  border-bottom: 2px solid rgba(0,0,0,.1);
+  padding-bottom: 10px;
+  margin-right: 50px;
+}
+
+.finishUl {
+  margin-right: 50px;
+  margin-top: 30px;
+}
+
+.finishUl li {
+  padding: 16px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  transition: border-color .25s 
+}
+
+.fileSize {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+.iconDiv {
+  position: fixed;
+  top: 130px;
+  right: 77px;
+}
+
+.iconDiv i {
+  cursor: pointer;
+}
