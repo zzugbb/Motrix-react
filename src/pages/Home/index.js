@@ -22,7 +22,7 @@ class Home extends Component {
             </li>
             <li>
               <Icon type="stop" />
-              <span>已停止</span>
+              <span>已完成</span>
             </li>
           </ul>
         </div>
