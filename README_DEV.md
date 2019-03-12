@@ -44,6 +44,19 @@ npm install babel-plugin-import --save-dev
 ['import', { libraryName: 'antd', style: 'css' }],
 ```
 
+## 装饰器的配置
+
+由于 create-react-app 使用的 `babel >= 7.x`, 则配置装饰器的方法改变
+
+```js
+npm install --save-dev @babel/plugin-proposal-decorators
+
+//package.json中babel项增加配置
+"plugins": [
+  ["@babel/plugin-proposal-decorators", { "legacy": true }]
+]
+```
+
 ## electron 在 react 中使用
 
 无法直接在 `react` 中使用 `node` 模块。
@@ -56,4 +69,26 @@ npm install babel-plugin-import --save-dev
 ```js
 //react.js 中直接使用
 const curWin = window.electron.remote.getCurrentWindow();
+```
+
+## electron 使用 react 调试工具
+
+[React DevTools Extension for Electron](https://www.npmjs.com/package/electron-react-devtools)
+
+```js
+npm install --save-dev electron-react-devtools
+//控制台输入，安装后按f5刷新即可。
+require('electron-react-devtools').install()
+```
+
+## electron 使用 redux 调试工具
+
+```js
+//main.js
+//路径为浏览器安装 redux-devtools-extension 插件的路径， lmhkpmbekcpmknklioeibfkpmmfibljd 是 插件id
+BrowserWindow.addDevToolsExtension('C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\lmhkpmbekcpmknklioeibfkpmmfibljd\\2.17.0_0\\');
+
+//index.js
+const reduxDevtools = window.devToolsExtension ? window.devToolsExtension(): f => f;
+const store = createStore(rootReducer, compose(applyMiddleware(thunk), reduxDevtools));
 ```

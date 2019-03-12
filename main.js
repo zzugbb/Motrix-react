@@ -19,6 +19,8 @@ let createWindow = () => {
     mainWindow.loadFile('./build/index.html/');
   }
 
+  BrowserWindow.addDevToolsExtension('C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\lmhkpmbekcpmknklioeibfkpmmfibljd\\2.17.0_0\\');
+
   //打开开发者工具
   //mainWindow.webContents.openDevTools({mode:'bottom'});
 
