@@ -65,7 +65,8 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-bottom: 16px;
-  transition: border-color .25s 
+  transition: border-color .25s;
+  position: relative;
 }
 
 .fileSize {
@@ -74,9 +75,9 @@
 }
 
 .iconDiv {
-  position: fixed;
-  top: 130px;
-  right: 77px;
+  position: absolute;
+  top: 16px;
+  right: 27px;
 }
 
 .iconDiv i {

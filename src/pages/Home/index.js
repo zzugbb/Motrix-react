@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import { Icon, Progress } from 'antd';
 import LeftMenu from '../../components/LeftMenu'
 import TopMenu from '../../components/TopMenu'
 import styles from './index.module.css';
+
+@connect(
+  state => state
+)
 
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      liVisible: 3
+      liVisible: 1
     }
   }
 
@@ -55,17 +60,19 @@ class Home extends Component {
             <div className={this.state.liVisible === 3 ? styles.divShow : styles.divHide}>
               <p className={styles.line}>已完成</p>
               <ul className={styles.finishUl}>
-                <li>
-                  <p className={styles.fileName}>avatar.png</p>
-                  <div className={styles.iconDiv}>
-                    <Icon type="folder-open" />
-                  </div>
-                  <Progress percent={100} />
-                  <p className={styles.fileSize}>31.6kb/31.6kb</p>
-                </li>
-                <li>
-
-                </li>
+                { this.props.TaskRedux.fileList.length > 0 ? 
+                  this.props.TaskRedux.fileList.map(item => {
+                    return (
+                      <li key={item.fileName}>
+                        <p className={styles.fileName}>{item.fileName}</p>
+                        <div className={styles.iconDiv} value={item.fileLink}>
+                          <Icon type="folder-open" />
+                         </div>
+                        <Progress percent={100} />
+                      </li>
+                    )
+                  }) : null
+                }
               </ul>
             </div>
           </div>

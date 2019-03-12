@@ -72,7 +72,11 @@ class AddTask extends Component {
         fileName: tempName,
         fileLink: tempLink
       }
-      this.props.AddTaskFunction(fileInfo);
+      //此处下载功能待完善，应该放在回调里。
+      const _this = this
+      setTimeout(function(){
+        _this.props.AddTaskFunction(fileInfo);
+      }, 3000)
     };
 
     this.setState({
