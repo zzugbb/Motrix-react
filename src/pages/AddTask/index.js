@@ -70,7 +70,7 @@ class AddTask extends Component {
       session.setDownloadPath(tempLink);
       let fileInfo = {
         fileName: tempName,
-        fileLink: tempLink
+        fileLink: tempLink + tempName
       }
       //此处下载功能待完善，应该放在回调里。
       const _this = this

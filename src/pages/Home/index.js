@@ -5,6 +5,9 @@ import LeftMenu from '../../components/LeftMenu'
 import TopMenu from '../../components/TopMenu'
 import styles from './index.module.css';
 
+const shell = window.electron.shell;
+
+
 @connect(
   state => state
 )
@@ -22,6 +25,12 @@ class Home extends Component {
     this.setState({
       liVisible: index
     })
+  }
+
+  handleClickOpenFolder(e) {
+    console.log(e.currentTarget.getAttribute("data-value"))
+    let path = e.currentTarget.getAttribute("data-value")
+    shell.showItemInFolder(path);
   }
 
 
@@ -65,7 +74,7 @@ class Home extends Component {
                     return (
                       <li key={item.fileName}>
                         <p className={styles.fileName}>{item.fileName}</p>
-                        <div className={styles.iconDiv} value={item.fileLink}>
+                        <div className={styles.iconDiv} data-value={item.fileLink} onClick= {this.handleClickOpenFolder.bind(this)}>
                           <Icon type="folder-open" />
                          </div>
                         <Progress percent={100} />

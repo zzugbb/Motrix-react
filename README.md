@@ -12,13 +12,13 @@
 
 ## 技术栈
 
-本项目采用 `Electron + react + react-router + antd` 实现。
+本项目采用 `Electron + react + react-router + redux + antd` 实现。
 
-关于下载采用了 Electron 的 `contents.downloadURL(url)`, `will-download`, `dialog.showOpenDialog()` 相关 api 实现了简易版的链接下载。
+关于下载采用了 Electron 的 `contents.downloadURL(url)`, `dialog.showOpenDialog()` 相关 api 实现了简易版的链接下载。
 
 ## 实现程度说明
 
-如上所述，本项目只是进行了一个很简易的实现，主要是对相关技术栈整个流程的一次体验。
+如上所述，本项目只是进行了一个很简易的实现，还存在很多问题，主要是对相关技术栈整个流程的一次体验。
 
 ## 本地开发
 
