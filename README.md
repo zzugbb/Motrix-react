@@ -42,14 +42,20 @@ yarn build
 electron 打包
 
 ```sh
-npm install electron-packager --save-dev
-```
-
-```json
-"electron-build": "electron-packager ./ --platform=win32 --arch=x64 --out=myout"
+yarn electron-packager
 ```
 
 [electron打包：electron-packager及electron-builder两种方式实现（for Windows）](https://segmentfault.com/a/1190000013924153)
+
+## 打包后的源文件加密
+
+```js
+npm install asar -g
+
+//在生成的应用的resources文件夹下执行下面命令
+asar pack ./app app.asar
+//执行完毕后在resources文件夹下可以看见生成的app.asar文件，此时可以把resources目录下的app文件夹删除,实现了源文件加密
+```
 
 ## 开发中的备忘
 
