@@ -69,6 +69,7 @@
     "estart": "cross-env NODE_ENV=dev electron .",
     "ebuild": "cross-env NODE_ENV=build electron .",
     "electron-packager": "cross-env NODE_ENV=build electron-packager ./ --platform=win32 --arch=x64 --out=myout",
+    "electron-packager-asar": "cross-env NODE_ENV=build electron-packager ./ --platform=win32 --arch=x64 --asar",
     "electron-builder": "cross-env NODE_ENV=build electron-builder --win --x64"
   },
   "eslintConfig": {
