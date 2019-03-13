@@ -66,8 +66,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "estart": "electron . --env dev",
-    "ebuild": "yarn build && electron . --env build"
+    "estart": "cross-env NODE_ENV=dev electron .",
+    "ebuild": "cross-env NODE_ENV=build electron .",
+    "electron-packager": "cross-env NODE_ENV=build electron-packager ./ --platform=win32 --arch=x64 --out=myout",
+    "electron-builder": "cross-env NODE_ENV=build electron-builder --win --x64"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -135,6 +137,9 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "babel-plugin-import": "^1.11.0",
+    "cross-env": "^5.2.0",
+    "electron-builder": "^20.39.0",
+    "electron-packager": "^13.1.1",
     "electron-react-devtools": "^0.5.3"
   }
 }

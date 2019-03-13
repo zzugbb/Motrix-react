@@ -31,6 +31,26 @@ yarn start //启动应用，开发时热更新
 yarn estart //启动桌面程序
 ```
 
+## 打包
+
+react 打包
+
+```sh
+yarn build
+```
+
+electron 打包
+
+```sh
+npm install electron-packager --save-dev
+```
+
+```json
+"electron-build": "electron-packager ./ --platform=win32 --arch=x64 --out=myout"
+```
+
+[electron打包：electron-packager及electron-builder两种方式实现（for Windows）](https://segmentfault.com/a/1190000013924153)
+
 ## 开发中的备忘
 
 [详见](./README_DEV.md)

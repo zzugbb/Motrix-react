@@ -1,5 +1,5 @@
 const { app, BrowserWindow, Menu} = require('electron');
-const env = process.argv[3];
+const env = process.env.NODE_ENV
 const menuTemplate = require('./electron-react/menu-config.js')
 
 // 浏览器引用
@@ -15,11 +15,10 @@ let createWindow = () => {
 
   if(env === "dev") { 
     mainWindow.loadURL("http://localhost:3000/")
+    BrowserWindow.addDevToolsExtension('C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\lmhkpmbekcpmknklioeibfkpmmfibljd\\2.17.0_0\\');
   } else if (env === "build") { 
     mainWindow.loadFile('./build/index.html/');
   }
-
-  BrowserWindow.addDevToolsExtension('C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\lmhkpmbekcpmknklioeibfkpmmfibljd\\2.17.0_0\\');
 
   //打开开发者工具
   //mainWindow.webContents.openDevTools({mode:'bottom'});

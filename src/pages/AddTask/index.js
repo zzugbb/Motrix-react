@@ -52,11 +52,12 @@ class AddTask extends Component {
   }
 
 
-  handleOk = (e) => {
+  handleOk = () => {
 
     let tempLink = "C:\\Users\\Administrator\\Downloads\\";
     let tempName = "";
-  
+    const _this = this;
+
     if (this.state.linkPath) {
       tempLink = this.state.linkPath + "\\";
     } 
@@ -73,7 +74,6 @@ class AddTask extends Component {
         fileLink: tempLink + tempName
       }
       //此处下载功能待完善，应该放在回调里。
-      const _this = this
       setTimeout(function(){
         _this.props.AddTaskFunction(fileInfo);
       }, 3000)
